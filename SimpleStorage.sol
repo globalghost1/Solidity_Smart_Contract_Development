@@ -7,7 +7,7 @@ contract SimpleStorage {
     uint256 public favoriteNumber = 0;  // public, private, internal, external
 
     //uint256[] listOfFavoriteNumbers; // 0,1,2, [77, 68 , 90]
-    stuct Person {
+    struct Person {
         uint256 favoriteNumer;
         string name;
     }
@@ -20,8 +20,6 @@ contract SimpleStorage {
     // Person public Mariah = Person({favoriteNumber: 16, name: "Pat"});
     // Person public Jon = Person({favoriteNumber: 12, name: "Pat"});
 
-
-
     function store(uint256 _favoriteNumber) public {
         favoriteNumber = _favoriteNumber; 
         favoriteNumber = favoriteNumber + 1;
@@ -29,8 +27,8 @@ contract SimpleStorage {
     }
         
     function something() public {
-            testVar = 6; //Can I do this? 
-            favoriteNumber = 7; // ?
+        TestVar = 6; //Can I do this? 
+        favoriteNumber = 7; // ?
     }
     
     // functions --> view
@@ -41,8 +39,10 @@ contract SimpleStorage {
     //function retrive() public pure returs(uint256){
     //   return 7;
     
-
+    // calldata, memory, storage
     function addPerson (string memory _name, uint256 _favoriteNumber) public {
         listOfPeople.push(Person(_favoriteNumber, _name));
     }
+
+    
 }
